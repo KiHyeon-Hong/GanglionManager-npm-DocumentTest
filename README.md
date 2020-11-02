@@ -47,8 +47,68 @@ else
 ```
 
 # 환경 설정
-## 
+## identificationUp
+- 등록한 사용자 token과 식별 요청 token 비교 시 오차 최대 허용 범위인 identificationUp 변경 기능
+- 범위 1.0이상의 실수
+```javascript
+const config = require('./config.js');
 
+config.identificationUp(data);
+```
+
+## identificationDown
+- 등록한 사용자 token과 식별 요청 token 비교 시 오차 최소 허용 범위인 identificationDown 변경 기능
+- 범위 1.0 이하의 실수
+```javascript
+const config = require('./config.js');
+
+config.identificationDown(data);
+```
+
+## minMaxCount
+- 개인식별 시 눈 깜빡임 데이터 특징 중 최소값과 최댓값을 제거하여 예외로 두는 과정에서 몇개의 최소값과 최댓값을 제거할 것인지 결정하는 minMaxCount 변경 기능
+- 범위 0 이상의 정수
+```javascript
+const config = require('./config.js');
+
+config.minMaxCount(data);
+```
+
+## blinkPoint
+- 뇌파 데이터에서 눈 깜박임 발생 시 값이 튀는 것을 감지하는데, 그 경계값인 blinkPoint 변경 기능
+- 범위 0 이상의 실수
+```javascript
+const config = require('./config.js');
+
+config.blinkPoint(data);
+```
+
+## delayTime
+- 눈 깜빡임 데이터 후 발생하는 잡파를 눈 깜박임 데이터로 감지하지 않기 위해 일정 시간 감지를 중지하는데, 해당 증지 시간인 delayTime 변경 기능
+- 범위 0 이상의 정수
+```javascript
+const config = require('./config.js');
+
+config.delayTime(data);
+```
+
+## eogBlink
+- 뇌파 데이터 측정 시 잡파가 들어오면 매우 큰 값이 들어와 생체 데이터 수집을 방해한다. 따라서 일정 이상의 값이 들어오면 해당 데이터 수집을 중지 하는데 그 경계값을 나타내는 eogBlink 값 변경 기능
+- 범위 0 이상의 정수
+```javascript
+const config = require('./config.js');
+
+config.eogBlink(data);
+```
+
+## count
+- 개인식별을 위한 뇌파 데이터 수집 시간 설정값인 count 변경 기능
+- 범위 0 이상의 정수, count 1당 약 2초
+```javascript
+const config = require('./config.js');
+
+config.count(data);
+```
 
 [npm-image]: https://img.shields.io/npm/v/koconut.svg?color=CB0000&label=npm&style=plastic&logo=npm
 [npm-url]: https://www.npmjs.com/package/ganglion-manager
