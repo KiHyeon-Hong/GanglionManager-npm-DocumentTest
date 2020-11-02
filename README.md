@@ -15,9 +15,39 @@ $ yarn add ganglion-manager
 
 # Usage
 
+- fp1, fp2 data 예시
+- 개인식별 서비스 등록과 요청은 fp1, fp2 데이터 측정 후 동작 가능
+```txt
+4.266687244140284,10.3962525751604,25.402068737489852,37.20354036481948,50.21379188368965, ...
+```
 
+## 개인식별 서비스 등록
+```javascript
+const register = require('./Register.js');
 
+var fp1 = fs.readFileSync('fp1 data', 'utf8');  //fp1 뇌파 데이터
+var fp2 = fs.readFileSync('fp2 data', 'utf8');  //fp2 뇌파 데이터
 
+register.register(fp1, fp2);
+```
+
+## 개인식별 서비스 요청
+```javascript
+const identification = require('./Identification.js');
+
+var fp1 = fs.readFileSync('fp1 data', 'utf8');  //fp1 뇌파 데이터
+var fp2 = fs.readFileSync('fp2 data', 'utf8');  //fp2 뇌파 데이터
+
+var result = identification.identification(fp1, fp2);
+
+if(result)
+    console.log("등록된 사용자");
+else
+    console.log("등록되지 않은 사용자");
+```
+
+# 환경 설정
+## 
 
 
 [npm-image]: https://img.shields.io/npm/v/koconut.svg?color=CB0000&label=npm&style=plastic&logo=npm
