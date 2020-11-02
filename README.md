@@ -13,8 +13,7 @@ or
 $ yarn add ganglion-manager
 ```
 
-# Usage
-
+# Example
 - fp1, fp2 data 예시
 - 개인식별 서비스 등록과 요청은 fp1, fp2 데이터 측정 후 동작 가능
 ```txt
@@ -109,6 +108,12 @@ const config = require('./config.js');
 
 config.count(data);
 ```
+
+# etc.
+## 개인식별 원리
+![EOG Blink](./images/EOG.png)
+- 눈 깜빡임 파형에서 나타나는 10개의 개인식별을 위한 특징과, 개인별 눈 깜빡임 지속 시간, 눈 깜빡임 사이 간격을 이용하여 개인식별
+
 
 [npm-image]: https://img.shields.io/npm/v/koconut.svg?color=CB0000&label=npm&style=plastic&logo=npm
 [npm-url]: https://www.npmjs.com/package/ganglion-manager
