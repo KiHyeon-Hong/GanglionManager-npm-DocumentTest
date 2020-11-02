@@ -4,8 +4,16 @@
 [![License][license-image]][license-url]
 [![Node.js Version][node-version-image]][node-version-url]
 
+# Installation
+```sh
+$ npm install ganglion-manager --save
 
+or
 
+$ yarn add ganglion-manager
+```
+
+# Usage
 
 
 
