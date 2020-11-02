@@ -1,4 +1,7 @@
-# GanglionManager-npm-DocumentTest
-GanglionManager-npm-DocumentTest
+# GanglionManager
 
-GanglionManager
+---------------------------------------
+
+[![npm version][npm-image]][npm-url]
+[![License][license-image]][license-url]
+[![Node.js Version][node-version-image]][node-version-url]
